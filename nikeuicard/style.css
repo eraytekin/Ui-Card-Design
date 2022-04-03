@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #ecf0f1;
+}
+.container{
+    width:550px;
+    height:250px;
+    background-color: #ced6e0;
+    box-shadow: 1px 1px 10px gray;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bigRow{
+    display:flex;
+    flex-direction: row; 
+}
+.row1, .row2{
+    width:50%;
+    height:250px;
+}
+.row1{
+    background-color: #cb031d;
+    box-shadow: 2px 1px 5px gray;
+    display:flex;
+    align-items: center;
+    transition: .5s;
+}
+/* .row1:hover{
+    transform: scale(1.1); 
+    transition: .5s;
+} */
+.row2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.row2 > .wasEdited > .nikeHeader, .row2 > .wasEdited > .price{
+    font-family: "montserrat",sans-serif;  
+}
+.nikeHeader{
+    line-height: 30px;
+}
+.price{
+    margin-left: 20px;
+    font-weight: 800;
+    font-size:21px;
+}
+.wasEdited{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.counter{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;   
+    align-items:center;
+    margin-top:30px;
+    padding:3px 8px;
+    border-radius: 5px;
+    background-color: #ced6e0;
+    box-shadow: 2px 5px 20px gray;
+   
+}
+#plus, #minus{
+    color:#2C3A47;
+}
+.resim{
+    width: 100%;
+    height: 70%;
+    background-size:cover; 
+}
+select{
+    background-color: #ced6e0;
+    margin-top:30px;
+    padding:3px 8px;
+    border:1px solid gray;
+    border-radius:3px;
+    outline:none;
+    box-shadow: 2px 5px 20px gray; 
+    font-family:"montserrat",sans-serif;
+}
+select::before{
+    content: "Size";
+    position: absolute;
+    top:-50%;
+}
+select > option:Hover{
+    background-color:white;
+}
+.addToBag{
+    margin-top:30px;
+    border:none;
+    padding:10px 15px;
+    width:90%;
+    border-radius: 3px;
+    font-family:"montserrat",sans-serif;
+    letter-spacing: 2px;
+    color:white;
+    background-color: #cb031d;
+    box-shadow: 2px 5px 20px red; 
+    transition: .5s;
+    animation-name: btnKey;
+    animation-duration: 2s;
+    cursor: pointer;
+}
+.addToBag:hover{
+    margin-top:30px;
+    border:none;
+    padding:10px 15px;
+    width:90%;
+    border-radius: 3px;
+    font-family:"montserrat",sans-serif;
+    letter-spacing: 2px;
+    color:white;
+    background-color: #cb031d;
+    box-shadow: -2px -2px 20px red; 
+    transition: .5s;
+}
+/* .middleColon{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+} */
+.sizeWord{
+    font-family: "montserrat",sans-serif;
+    font-weight: 900;
+    font-size:13px;
+    letter-spacing: 1px;
+    
+}
+
+/*Animation*/
+@keyframes btnKey {
+    from{
+        width:150px;
+        margin-top:25px;
+    }
+    to{
+        width:90%;
+        margin-top:30px;
+    }
+  }
+
+
+
+/* Responsive Design - Mobile*/
+@media(max-width:600px){
+    .bigRow{
+        display:flex;
+        flex-direction: column; 
+    }
+    .container{
+        width: 250px;
+        height: 550px;
+    }
+    .row1, .row2{
+        width:100%;
+        height:275px;
+        overflow: hidden;
+    }
+    .resim{
+        width: 100%;
+        height: 55%;
+        background-size:cover; 
+    }
+}
